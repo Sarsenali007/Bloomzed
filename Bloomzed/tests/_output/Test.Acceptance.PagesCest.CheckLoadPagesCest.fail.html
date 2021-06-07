@@ -1,0 +1,668 @@
+<html lang="ru-RU"><head>
+    <title>Сотрудники</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="qRDILiDEkgfWunHAJRbGSNl3sv8N2AM5UObWhph20WXIWIR-erDBSoLJFapBcLx9ngHbmz-1bkwj17PTqxCTJA==">
+
+<link href="/assets/6689792b/css/select2.min.css" rel="stylesheet">
+<link href="/assets/380f95ea/css/select2-addl.min.css" rel="stylesheet">
+<link href="/assets/380f95ea/css/select2-bootstrap.min.css" rel="stylesheet">
+<link href="/assets/f210dbbb/css/kv-widgets.min.css" rel="stylesheet">
+<link href="/assets/255902fd/css/bootstrap.css" rel="stylesheet">
+<link href="/themes/basic/css/theme-violet.css" rel="stylesheet">
+<link href="/themes/basic/css/mcustomscrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="/themes/basic/css/custom_theme_yii2.css" rel="stylesheet">
+<script>var s2options_3feda8aa = {"themeCss":".select2-container--bootstrap","sizeCss":" input-sm","doReset":true,"doToggle":false,"doOrder":false};
+window.select2_dfe3628a = {"allowClear":true,"minimumInputLength":2,"ajax":{"url":"\/legal-entities\/default\/autocomplete-le","dataType":"json","cache":true,"delay":300,"data":function(params) { return {q:params.term}; }},"escapeMarkup":function (markup) { return markup; },"templateResult":function(results) { return results.short_name || results.full_name || results.text; },"templateSelection":function (results) { return results.short_name || results.full_name || results.text; },"theme":"bootstrap","width":"100%","placeholder":"Выберите бизнес-пользователя","language":"ru-RU"};
+
+window.select2_cd7a1dc4 = {"allowClear":true,"theme":"bootstrap","width":"100%","placeholder":"Выберите роль","language":"ru-RU"};
+
+window.select2_97c3b525 = {"allowClear":true,"theme":"bootstrap","width":"100%","minimumResultsForSearch":Infinity,"placeholder":"Выберите статус","language":"ru-RU"};
+
+window.select2_95b74246 = {"theme":"bootstrap","width":"100%","minimumResultsForSearch":Infinity,"language":"ru-RU"};
+
+window.select2_7d56c328 = {"theme":"bootstrap","width":"100%","minimumResultsForSearch":Infinity,"placeholder":"Выберите статус","language":"ru-RU"};
+
+var s2options_e78990d0 = {"themeCss":".select2-container--bootstrap","sizeCss":" input-sm","doReset":true,"doToggle":true,"doOrder":false};
+window.select2_f4ad05ca = {"allowClear":true,"minimumInputLength":2,"ajax":{"url":"\/legal-entities\/default\/autocomplete-le","dataType":"json","cache":true,"delay":300,"data":function(params) { return {q:params.term, withTypes: 1}; }},"escapeMarkup":function (markup) { return markup; },"templateResult":function(result) { return result.short_name || result.full_name || result.name || result.text; },"templateSelection":function (result) { return result.short_name || result.full_name || result.name || result.text; },"theme":"bootstrap","width":"100%","placeholder":"Выберите бизнес-пользователя","language":"ru-RU"};
+
+window.select2_bdd5603e = {"theme":"bootstrap","width":"100%","placeholder":"Выберите роль","language":"ru-RU"};
+</script></head>
+<body>
+
+<style>
+    div.datepicker > div {
+        display: block;
+    }
+</style>
+<script>
+        let updateItemSuccessMessage = "Успешно сохранено";
+    let allSuccessMessage = "Successfully saved";</script>
+<div class="page-container">
+
+    <div class="page-sidebar">
+    <ul class="x-navigation"><li class="xn-logo">
+            <a href="/">eMoney Platform</a>
+            <a href="#" class="x-navigation-control"></a>
+        </li>
+        <li class="xn-profile">
+            <a href="#" class="profile-mini">
+                <img src="/themes/basic/assets/images/blm-logo-small.png">
+            </a>
+            <div class="profile">
+                <div class="profile-image">
+                    <a href="/">
+                        <img src="/themes/basic/assets/images/blm-logo.png">
+                    </a>
+                </div>
+                <div class="profile-data">
+                    <div class="profile-data-name">zhunisbek.s@bloomzed.com </div>
+                    <div class="profile-data-name">
+                        <small> Администратор</small>
+                    </div>
+                </div>
+            </div>
+        </li><li class="active"><a href="/users"><em class="fa fa-users"></em>  <span class="xn-text">Сотрудники</span></a></li>
+<li class="xn-openable"><a href="#"><em class="fa fa-briefcase"></em>  <span class="xn-text">Бизнес пользователи</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/legal-entities/issuers"><em class="fa fa-briefcase"></em>  <span>Эмитенты</span></a></li>
+<li><a href="/legal-entities/contractors"><em class="fa fa-briefcase"></em>  <span>Контрагенты</span></a></li>
+<li><a href="/legal-entities/agents"><em class="fa fa-briefcase"></em>  <span>Агенты</span></a></li>
+<li><a href="/legal-entities/subagent"><em class="fa fa-briefcase"></em>  <span>Субагенты</span></a></li>
+<li><a href="/legal-entities/merchants"><em class="fa fa-briefcase"></em>  <span>Мерчанты</span></a></li>
+<li><a href="/legal-entities/claim"><em class="fa fa-briefcase"></em>  <span>Заявки на блокировку / разблокировку</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-user-check"></em>  <span class="xn-text">KYC</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/kyc-templates"><em class="fa fa-globe"></em>  <span>KYC шаблоны</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-key"></em>  <span class="xn-text">Роли и полномочия</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/permissions/roles"><em class="fa fa-key"></em>  <span>Роли и полномочия</span></a></li>
+<li><a href="/permissions/sorting"><em class="fa fa-key"></em>  <span>Сортировка полномочий</span></a></li>
+</ul>
+</li>
+<li><a href="/customers"><em class="fa fa-fa fa-shopping-cart"></em>  <span class="xn-text">Клиенты</span></a></li>
+<li><a href="/finance/bids"><em class="fa fa-money-bill-alt"></em>  <span class="xn-text">Финансовые операции</span></a></li>
+<li><a href="/transactions"><em class="fa fa-cash-register"></em>  <span class="xn-text">Транзакции</span></a></li>
+<li class="xn-openable"><a href="#"><em class="fa fa-exclamation-triangle"></em>  <span class="xn-text">Отчеты</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/reports/transactions"><em class="fa fa-book"></em>  <span>История транзакций</span></a></li>
+<li><a href="/reports/top-up"><em class="fa fa-book"></em>  <span>Отчет "Пополнение"</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-spider"></em>  <span class="xn-text">AML</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/aml/blackList"><em class="fa fa-ban"></em>  <span>Черный список</span></a></li>
+<li class="xn-openable"><a href="#"><em class="fa fa-lemon"></em>  <span>Лимиты</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/aml/limits/templates"><em class="fa fa-folder"></em>  <span>Шаблоны лимитов</span></a></li>
+<li><a href="/aml/limits/wallet-types"><em class="fa fa-pallet"></em>  <span>Лимиты по типам кошельков</span></a></li>
+<li><a href="/aml/walletMaximumBalance/default"><em class="fa fa-hand-paper"></em>  <span>Лимит максимального баланса кошельков</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-shield-alt"></em>  <span>Мониторинг</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/aml/rules/rule"><em class="fa fa-ruler"></em>  <span>Правила</span></a></li>
+<li><a href="/aml/fraudTransactions"><em class="fa fa-address-book"></em>  <span>Подозрительные транзакции</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-funnel-dollar"></em>  <span class="xn-text">Финансовое администрирование</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/auto-redemption-rules"><em class="fa fa-magic"></em>  <span>Правила автопогашения</span></a></li>
+<li><a href="/fee/fee-templates"><em class="fa fa-filter"></em>  <span>Шаблоны комиссий</span></a></li>
+<li><a href="/fee/fee-by-operation-type"><em class="fa fa-file-invoice-dollar"></em>  <span>Комиссии по типам операций</span></a></li>
+<li><a href="/fee/operations-between-wallets"><em class="fa fa-pallet"></em>  <span>Операции между кошельками</span></a></li>
+<li><a href="/tariff-calendar/default/index"><em class="fa fa-calendar-alt"></em>  <span>Тарифный календарь</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-apple-alt"></em>  <span class="xn-text">Сервисный каталог</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/service-catalog/merchant-products"><em class="fa fa-folder"></em>  <span>Продукты мерчантов</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="/wallets"><em class="fa fa-wallet"></em>  <span class="xn-text">Кошельки</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/wallets"><em class="fa fa-wallet"></em>  <span>Кошельки</span></a></li>
+<li><a href="/wallet-history"><em class="fa fa-pallet"></em>  <span>История по кошельку</span></a></li>
+</ul>
+</li>
+<li><a href="/bank"><em class="fa fa-university"></em>  <span class="xn-text">Банки</span></a></li>
+<li><a href="/bank-details"><em class="fa fa-building"></em>  <span class="xn-text">Банковские счета</span></a></li>
+<li class="xn-openable"><a href="#"><em class="fa fa-sms"></em>  <span class="xn-text">Sms</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/sms"><em class="fa fa-folder"></em>  <span>Sms</span></a></li>
+<li><a href="/sms/exception-numbers"><em class="fa fa-folder"></em>  <span>Номера исключения</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-mobile-alt"></em>  <span class="xn-text">Мобильное приложение</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/mobile-app/functionality-settings"><em class="fa fa-sliders-h"></em>  <span>Функциональные настройки</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-folder"></em>  <span class="xn-text">Справочники</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/directories/document-types"><em class="fa fa-file-alt"></em>  <span>Виды документов</span></a></li>
+<li><a href="/directories/countries"><em class="fa fa-briefcase"></em>  <span>Страны</span></a></li>
+<li><a href="/directories/legal-forms"><em class="fa fa-briefcase"></em>  <span>Организационно-правовые формы</span></a></li>
+<li><a href="/directories/oked"><em class="fa fa-briefcase"></em>  <span>ОКЭД</span></a></li>
+<li><a href="/directories/residence-type"><em class="fa fa-briefcase"></em>  <span>Тип резидентства</span></a></li>
+<li><a href="/directories/participant-type"><em class="fa fa-briefcase"></em>  <span>Типы участников</span></a></li>
+<li><a href="/directories/payment-types"><em class="fa fa-briefcase"></em>  <span>Вид платежа</span></a></li>
+<li><a href="/directories/risk-level"><em class="fa fa-briefcase"></em>  <span>Уровень риска</span></a></li>
+<li><a href="/directories/regions"><em class="fa fa-briefcase"></em>  <span>Области или ГА</span></a></li>
+<li><a href="/directories/cities"><em class="fa fa-briefcase"></em>  <span>Село или город</span></a></li>
+<li><a href="/directories/city-or-rural"><em class="fa fa-briefcase"></em>  <span>Города или с.о.</span></a></li>
+<li><a href="/directories/district"><em class="fa fa-briefcase"></em>  <span>Районы</span></a></li>
+</ul>
+</li>
+<li class="xn-openable"><a href="#"><em class="fa fa-atom"></em>  <span class="xn-text">Импорт/экспорт справочников</span> <span class="pull-right-container"></span></a>
+<ul>
+<li><a href="/simple-import-export/import"><em class="fa fa-briefcase"></em>  <span>Импорт справочников</span></a></li>
+</ul>
+</li></ul></div>
+    <div class="page-content" style="height: 1189px;">
+
+        <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+            <li class="xn-icon-button">
+                <a href="#" class="x-navigation-minimize"><span class="fa fa-indent fa-rotate-180"></span></a>
+            </li>
+
+            <li class="xn-icon-button pull-right">
+                <a href="#" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out-alt"></span></a>
+            </li>
+
+                            <li class="dropdown pull-right">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="label label-default">ru-RU</span>
+        <span><em class="caret"></em></span>
+    </a>
+    <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging ui-draggable">
+        <div class="panel-heading ui-draggable-handle">
+            <h3 class="panel-title"><span class="fa fa-globe"></span> Языки</h3>
+        </div>
+        <div class="panel-body list-group list-group-contacts scroll mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" style="height: 200px;"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                            <a class="list-group-item" href="/en/users/default/index">en-US</a>                            <a class="list-group-item" href="/ru/users/default/index">ru-RU</a>                    </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div><div class="mCSB_draggerRail"></div></div></div></div></div></div>
+    </div>
+</li>
+            
+            
+        </ul>
+
+        <div class="page-content-wrap">
+            <div style="padding-top: 20px;" class="col-md-12" id="main-content-block">
+                <div class="panel panel-default">
+                    <div class="panel-heading ui-draggable-handle">
+                        <h3 class="panel-title">Сотрудники</h3>
+                    </div>
+
+                    <div class="panel-body">
+                                                
+    <div class="row">
+        <div class="pull-right btn-pool">
+            <div class="col-md-12">
+                <button class="btn btn-info refresh-data" data-pjax-id="gridViewList">
+                    <em class="fas fa-sync-alt"></em>
+                    Обновить данные                </button>
+                                    <button class="btn btn-success show-create-modal">
+                        <em class="fas fa-plus-circle"></em>
+                        Создать сотрудника                    </button>
+                            </div>
+        </div>
+    </div>
+
+<div id="gridViewList" data-pjax-container="" data-pjax-push-state="" data-pjax-timeout="2000"><div id="w0">
+        <style>
+            .per_page .select2.select2-container {
+               width: 60px !important;
+               display: inline-block;
+            }
+        </style>
+        
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+            <div class="dataTables_length" id="DataTables_Table_0_length">
+                <div class="row">
+                    <label class="per_page">Показать <select id="per-page" class="form-control select2-hidden-accessible" name="per-page" style="min-width: 180px; width: 1px; height: 1px; visibility: hidden;" data-s2-options="s2options_3feda8aa" data-krajee-select2="select2_95b74246" data-select2-id="select2-data-per-page" tabindex="-1" aria-hidden="true">
+<option value="10" selected="" data-select2-id="select2-data-8-oysl">10</option>
+<option value="20">20</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-7-dg9a" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-per-page-container" aria-controls="select2-per-page-container"><span class="select2-selection__rendered" id="select2-per-page-container" role="textbox" aria-readonly="true" title="10">10</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> записей</label>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover"><thead>
+<tr><th><a href="/users/default/index?sort=id" data-sort="id">ID</a></th><th><a href="/users/default/index?sort=fio" data-sort="fio">Полное наименование</a></th><th><a href="/users/default/index?sort=login" data-sort="login">Логин</a></th><th>Бизнес-пользователь</th><th>Роль</th><th>Статус</th></tr><tr id="w0-filters" class="filters"><td><div class="input-group"><div class="input-group-addon"><span class="fa fa-search"></span></div><input type="text" id="employeesearch-id" class="form-control" name="EmployeeSearch[id]" style="min-width: 60px;" placeholder="ID" autocomplete="off"></div></td><td><div class="input-group"><div class="input-group-addon"><span class="fa fa-search"></span></div><input type="text" id="employeesearch-fio" class="form-control" name="EmployeeSearch[fio]" style="min-width: 60px;" placeholder="Полное наименование" autocomplete="off"></div></td><td><div class="input-group"><div class="input-group-addon"><span class="fa fa-search"></span></div><input type="text" id="employeesearch-login" class="form-control" name="EmployeeSearch[login]" style="min-width: 60px;" placeholder="Логин" autocomplete="off"></div></td><td><select id="legal_entity_id_search" class="form-control select2-hidden-accessible" name="EmployeeSearch[legal_entity_id]" data-s2-options="s2options_3feda8aa" data-krajee-select2="select2_dfe3628a" style="width: 1px; height: 1px; visibility: hidden;" data-select2-id="select2-data-legal_entity_id_search" tabindex="-1" aria-hidden="true">
+<option value="" data-select2-id="select2-data-2-2mfb">Выберите бизнес-пользователя</option>
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-1-1fa5" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-legal_entity_id_search-container" aria-controls="select2-legal_entity_id_search-container"><span class="select2-selection__rendered" id="select2-legal_entity_id_search-container" role="textbox" aria-readonly="true" title="Выберите бизнес-пользователя"><span class="select2-selection__placeholder">Выберите бизнес-пользователя</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></td><td><select id="role_id_search" class="form-control select2-hidden-accessible" name="EmployeeSearch[role_id]" data-s2-options="s2options_3feda8aa" data-krajee-select2="select2_cd7a1dc4" style="width: 1px; height: 1px; visibility: hidden;" data-select2-id="select2-data-role_id_search" tabindex="-1" aria-hidden="true">
+<option value="" data-select2-id="select2-data-4-fz4m">Выберите роль</option>
+<option value="5">Super admin</option>
+<option value="17">Бэк-офис</option>
+<option value="18">Комплаенс контроль</option>
+<option value="20">Служба поддержки</option>
+<option value="22">Wallet Factory</option>
+<option value="23">Администратор "DEM Partners"</option>
+<option value="21">Администратор "Money Mart"</option>
+<option value="19">Администратор</option>
+<option value="24">Администратор СРО </option>
+<option value="26">Администратор ИП "Dream Lights"</option>
+<option value="27">Администратор ТОО "Turan Education"</option>
+<option value="28">Администратор  "ТОО ESH MART"</option>
+<option value="30">Роль Мерчант</option>
+<option value="31">Роль Мерчант &amp; Агент &amp; Оператор</option>
+<option value="29">Роль Мерчант &amp;  СубАгент</option>
+<option value="32">Маркетинг</option>
+<option value="33">Null</option>
+<option value="34">Маркетинг + пушы</option>
+<option value="35">Просмотр всей админки</option>
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-3-dk7e" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-role_id_search-container" aria-controls="select2-role_id_search-container"><span class="select2-selection__rendered" id="select2-role_id_search-container" role="textbox" aria-readonly="true" title="Выберите роль"><span class="select2-selection__placeholder">Выберите роль</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></td><td><select id="is_active_search" class="form-control select2-hidden-accessible" name="EmployeeSearch[is_active]" data-s2-options="s2options_3feda8aa" data-krajee-select2="select2_97c3b525" style="width: 1px; height: 1px; visibility: hidden;" data-select2-id="select2-data-is_active_search" tabindex="-1" aria-hidden="true">
+<option value="" data-select2-id="select2-data-6-4hcp">Выберите статус</option>
+<option value="0">Не активен</option>
+<option value="1">Активен</option>
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-5-djlw" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-is_active_search-container" aria-controls="select2-is_active_search-container"><span class="select2-selection__rendered" id="select2-is_active_search-container" role="textbox" aria-readonly="true" title="Выберите статус"><span class="select2-selection__placeholder">Выберите статус</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></td></tr>
+</thead>
+<tbody>
+<tr class=" get-view" data-key="0" data-item-id="101" style=" cursor: pointer;"><td style="width:80px;">101</td><td>Земсков Никита</td><td>zemskov.n@bloomzed.com</td><td style="min-width: 120px;">ТОО "Bloomzed.kz"</td><td style="min-width: 120px;">Служба поддержки</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="1" data-item-id="100" style=" cursor: pointer;"><td style="width:80px;">100</td><td>Мукашев Айдын</td><td>ma@bloomzed.com</td><td style="min-width: 120px;">ТОО "Bloomzed.kz"</td><td style="min-width: 120px;">Комплаенс контроль</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="2" data-item-id="99" style=" cursor: pointer;"><td style="width:80px;">99</td><td>ТОО “GALAXY TOUR and Co”</td><td>galaxytour.gt@gmail.com</td><td style="min-width: 120px;">ТОО “GALAXY TOUR and Co”</td><td style="min-width: 120px;">Роль Мерчант</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="3" data-item-id="98" style=" cursor: pointer;"><td style="width:80px;">98</td><td>Жаннара Куаншалиева</td><td>kuanshaliyeva.z@bloomzed.com</td><td style="min-width: 120px;">ТОО "Bloomzed.kz"</td><td style="min-width: 120px;">Просмотр всей админки</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="4" data-item-id="97" style=" cursor: pointer;"><td style="width:80px;">97</td><td>Администратор ТОО "ESH MART"  Гульжахан</td><td>gulzhahan@bloomzed.com</td><td style="min-width: 120px;">ТОО "ESH MART"</td><td style="min-width: 120px;">Администратор  "ТОО ESH MART"</td><td class="text-center" style="min-width: 120px;">Не активен</td></tr>
+<tr class=" get-view" data-key="5" data-item-id="96" style=" cursor: pointer;"><td style="width:80px;">96</td><td>Администратор ТОО "ESH MART" Елена</td><td>elena@bloomzed.com</td><td style="min-width: 120px;">ТОО "ESH MART"</td><td style="min-width: 120px;">Администратор  "ТОО ESH MART"</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="6" data-item-id="95" style=" cursor: pointer;"><td style="width:80px;">95</td><td>Администратор ТОО "ESH MART" Малика</td><td>amutova@bloomzed.com</td><td style="min-width: 120px;">ТОО "ESH MART"</td><td style="min-width: 120px;">Администратор  "ТОО ESH MART"</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="7" data-item-id="94" style=" cursor: pointer;"><td style="width:80px;">94</td><td>Администратор AO Noman</td><td>info@nomad.kz</td><td style="min-width: 120px;">АО «Страховая Компания Номад Иншуранс»</td><td style="min-width: 120px;">Роль Мерчант</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="8" data-item-id="93" style=" cursor: pointer;"><td style="width:80px;">93</td><td>Амутова Малика</td><td>amutova.m@bloomzed.com</td><td style="min-width: 120px;">ТОО "Bloomzed.kz"</td><td style="min-width: 120px;">Служба поддержки</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+<tr class=" get-view" data-key="9" data-item-id="92" style=" cursor: pointer;"><td style="width:80px;">92</td><td>Гульжахан Ахмадиева</td><td>akhmadiyeva.g@bloomzed.com</td><td style="min-width: 120px;">ТОО "Bloomzed.kz"</td><td style="min-width: 120px;">Маркетинг + пушы</td><td class="text-center" style="min-width: 120px;">Активен</td></tr>
+</tbody></table>
+            </div>
+
+            <div id="pagination-footer" class="panel-footer pagination-footer">            
+                <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
+                    <div class="summary">Показаны записи <b>1-10</b> из <b>37</b>.</div>
+                </div>
+                <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                    <ul class="pagination"><li class="active"><a href="/users/default/index?page=1&amp;per-page=10" data-page="0">1</a></li>
+<li><a href="/users/default/index?page=2&amp;per-page=10" data-page="1">2</a></li>
+<li><a href="/users/default/index?page=3&amp;per-page=10" data-page="2">3</a></li>
+<li><a href="/users/default/index?page=4&amp;per-page=10" data-page="3">4</a></li></ul>
+                </div>
+            </div>
+        </div>
+        </div></div>
+
+<div class="modal fade" id="modal-create-item" role="dialog" aria-labelledby="largeModalHead" tabindex="false" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="largeModalHead">
+                    Создать сотрудника                </h4>
+            </div>
+            <input type="hidden" name="modalType" value="create">
+            <form class="form-custom form-horizontal create-employee" id="form-create">
+                <input type="hidden" name="step" value="1">
+                <input type="hidden" name="id" value="">
+                <div class="modal-body">
+                    <div class="row" data-step="1">
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label>Полное наименование *</label>
+                                <input name="fio" type="text" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label>Логин *</label>
+                                <input name="login" type="text" class="form-control" value="">
+                            </div>
+
+                                                            <div class="form-group">
+                                    <label>Пароль *</label>
+                                    <input name="pass" type="password" class="form-control" value="">
+                                </div>
+                            
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input name="email" type="text" class="form-control" value="">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5">
+
+                            <div class="form-group">
+                                <label>Телефон</label>
+                                <input name="phone" type="text" class="form-control" value="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Статус</label>
+                                <select id="is_active_create" class="form-control select2-hidden-accessible" name="is_active" data-s2-options="s2options_3feda8aa" data-krajee-select2="select2_7d56c328" style="width: 1px; height: 1px; visibility: hidden;" data-select2-id="select2-data-is_active_create" tabindex="-1" aria-hidden="true">
+<option value="">Выберите статус</option>
+<option value="0">Не активен</option>
+<option value="1" selected="" data-select2-id="select2-data-10-qvfn">Активен</option>
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-9-b6yr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-is_active_create-container" aria-controls="select2-is_active_create-container"><span class="select2-selection__rendered" id="select2-is_active_create-container" role="textbox" aria-readonly="true" title="Активен">Активен</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>                            </div>
+                            <div id="is_active_create_div" class="form-group" style="display: none;">
+                                <label for="reason_for_blocking">Причина                                </label>
+                                <textarea rows="3" name="reason_for_blocking" id="reason_for_blocking_create" class="form-control"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Примечание</label>
+                                <textarea name="note" class="form-control" rows="5"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row" data-step="2" style="display: none">
+                        
+<div class="col-md-12">
+    <div class="col-md-1">
+        <p style="font-weight: bold">
+            Сотрудник        </p>
+        <p>Наименование</p>
+        <p>Логин</p>
+        <p>E-mail</p>
+    </div>
+    <div class="col-md-3">
+        <p>&nbsp;</p>
+        <p class="fio-filled"></p>
+        <p class="login-filled"></p>
+        <p class="email-filled"></p>
+    </div>
+    <div class="col-md-1">
+        <p>&nbsp;</p>
+        <p>Телефон</p>
+        <p>Статус</p>
+        <p>Notice</p>
+        <p class="reason_for_blocking">
+            Причина блокировки        </p>
+    </div>
+    <div class="col-md-3">
+        <p>&nbsp;</p>
+        <p class="phone-filled"> &nbsp;</p>
+        <p class="is_active-filled"> &nbsp;</p>
+        <p class="note-filled"> &nbsp;</p>
+        <p class="reason_for_blocking-filled"></p>
+    </div>
+</div>
+
+<div class="col-md-12" data-step="3" style="display:none;">
+    <div class="col-md-2 legalEntityIds-filled">
+        <p style="font-weight: bold">
+            Бизнес-пользователь        </p>
+    </div>
+</div>
+
+<div class="col-md-12"><hr style="border-top: 2px solid #eee"></div>                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Сотрудник бизнес-пользователя *</label>
+                                <select id="legal_entity_id_create" class="form-control select2-hidden-accessible" name="legalEntityIds[]" multiple="" size="4" data-s2-options="s2options_e78990d0" data-krajee-select2="select2_f4ad05ca" style="width: 1px; height: 1px; visibility: hidden;" data-select2-id="select2-data-legal_entity_id_create" tabindex="-1" aria-hidden="true">
+
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-11-uovp" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-legal_entity_id_create-container"></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-legal_entity_id_create-container" placeholder="Выберите бизнес-пользователя" style="width: 100%;"></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>                                                            </div>
+                        </div>
+                    </div>
+                    <div class="row" data-step="3" style="display: none">
+                        
+<div class="col-md-12">
+    <div class="col-md-1">
+        <p style="font-weight: bold">
+            Сотрудник        </p>
+        <p>Наименование</p>
+        <p>Логин</p>
+        <p>E-mail</p>
+    </div>
+    <div class="col-md-3">
+        <p>&nbsp;</p>
+        <p class="fio-filled"></p>
+        <p class="login-filled"></p>
+        <p class="email-filled"></p>
+    </div>
+    <div class="col-md-1">
+        <p>&nbsp;</p>
+        <p>Телефон</p>
+        <p>Статус</p>
+        <p>Notice</p>
+        <p class="reason_for_blocking">
+            Причина блокировки        </p>
+    </div>
+    <div class="col-md-3">
+        <p>&nbsp;</p>
+        <p class="phone-filled"> &nbsp;</p>
+        <p class="is_active-filled"> &nbsp;</p>
+        <p class="note-filled"> &nbsp;</p>
+        <p class="reason_for_blocking-filled"></p>
+    </div>
+</div>
+
+<div class="col-md-12" data-step="3" style="display:none;">
+    <div class="col-md-2 legalEntityIds-filled">
+        <p style="font-weight: bold">
+            Бизнес-пользователь        </p>
+    </div>
+</div>
+
+<div class="col-md-12"><hr style="border-top: 2px solid #eee"></div>                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Роль *</label>
+                                <div id="rolesByLegalEntityCreate">
+                                    <select id="role_id_create" class="form-control select2-hidden-accessible" name="role_id" data-s2-options="s2options_3feda8aa" data-krajee-select2="select2_bdd5603e" style="width: 1px; height: 1px; visibility: hidden;" data-select2-id="select2-data-role_id_create" tabindex="-1" aria-hidden="true">
+<option value="" data-select2-id="select2-data-13-0eho">Выберите роль</option>
+<option value="5">Super admin</option>
+<option value="17">Бэк-офис</option>
+<option value="18">Комплаенс контроль</option>
+<option value="20">Служба поддержки</option>
+<option value="22">Wallet Factory</option>
+<option value="23">Администратор "DEM Partners"</option>
+<option value="21">Администратор "Money Mart"</option>
+<option value="19">Администратор</option>
+<option value="24">Администратор СРО </option>
+<option value="26">Администратор ИП "Dream Lights"</option>
+<option value="27">Администратор ТОО "Turan Education"</option>
+<option value="28">Администратор  "ТОО ESH MART"</option>
+<option value="30">Роль Мерчант</option>
+<option value="31">Роль Мерчант &amp; Агент &amp; Оператор</option>
+<option value="29">Роль Мерчант &amp;  СубАгент</option>
+<option value="32">Маркетинг</option>
+<option value="33">Null</option>
+<option value="34">Маркетинг + пушы</option>
+<option value="35">Просмотр всей админки</option>
+</select><span class="select2 select2-container select2-container--bootstrap input-sm" dir="ltr" data-select2-id="select2-data-12-pqdp" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-role_id_create-container" aria-controls="select2-role_id_create-container"><span class="select2-selection__rendered" id="select2-role_id_create-container" role="textbox" aria-readonly="true" title="Выберите роль"><span class="select2-selection__placeholder">Выберите роль</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Закрыть                    </button>
+                    <a class="btn btn-warning back-btn" style="display: none">
+                        Назад                    </a>
+                    <a class="btn btn-warning next-btn" disabled="">
+                        Далее                    </a>
+                    <button class="btn btn-success save-btn" style="display: none" disabled="">
+                        Сохранить                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-backdrop in"></div>
+</div>
+
+<div class="modal fade" id="modal-employees-for-block" role="dialog" aria-labelledby="largeModalHead" tabindex="false" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="largeModalHead">
+                    Блокировка                </h4>
+            </div>
+            <form class="form-custom form-horizontal" id="form-employees-for-block">
+                <input name="is_active" type="hidden" value="">
+                <input name="id" type="hidden" value="">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="reason_for_blocking">Причина <span class="text-danger">*</span></label>
+                                <textarea rows="6" name="reason_for_blocking" id="reason_for_blocking" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Закрыть                    </button>
+                    <button type="button" class="btn btn-success">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-backdrop in"></div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="info-panel-block" style="padding-top: 20px; display: none"></div>
+            <div id="view-update-modal" style="display: none"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-sign-out-alt"></span> <strong>Выйти</strong></div>
+            <div class="mb-content">
+                <p>Вы уверены что хотите выйти? Подтвердите свой выбор</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <a class="btn btn-success btn-lg" href="/logout" data-method="POST">Да</a>                    <button class="btn btn-default btn-lg mb-control-close">Нет</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="message-box animated fadeIn" data-sound="alert" id="accessForbidden">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title">
+                <span class="fa fa fa-lock"></span>
+                <span id="statusText">Запрещен</span>
+                <strong id="statusCode">403</strong>
+            </div>
+            <div class="mb-content">
+                <p id="statusDescription">У Вас нет прав для выполнения этой операции</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <button data-item-id="hide" id="button403" class="btn btn-danger btn-lg mb-control-close">Понятно :(
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="audio-alert" src="/themes/basic/audio/alert.mp3" preload="auto"> </audio>
+<audio id="audio-fail" src="/themes/basic/audio/fail.mp3" preload="auto"> </audio>
+
+<script src="/assets/102716a3/jquery.js"></script>
+<script src="/assets/793f5ba8/yii.js"></script>
+<script src="/assets/6689792b/js/select2.full.min.js"></script>
+<script src="/assets/6689792b/js/i18n/ru.js"></script>
+<script src="/assets/380f95ea/js/select2-krajee.min.js"></script>
+<script src="/assets/f210dbbb/js/kv-widgets.min.js"></script>
+<script src="/assets/793f5ba8/yii.gridView.js"></script>
+<script src="/assets/a7474514/jquery.pjax.js"></script>
+<script src="/themes/basic/js/plugins/jquery/jquery-ui.min.js"></script>
+<script src="/themes/basic/js/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="/themes/basic/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.js"></script>
+<script src="/themes/basic/js/plugins/noty/jquery.noty.js"></script>
+<script src="/themes/basic/js/plugins/noty/layouts/topCenter.js"></script>
+<script src="/themes/basic/js/plugins/noty/layouts/topLeft.js"></script>
+<script src="/themes/basic/js/plugins/noty/layouts/topRight.js"></script>
+<script src="/themes/basic/js/plugins/noty/themes/default.js"></script>
+<script src="/themes/basic/js/plugins.js"></script>
+<script src="/themes/basic/js/actions.js"></script>
+<script src="/themes/basic/js/plugins/validationengine/languages/jquery.validationEngine-ru.js"></script>
+<script src="/themes/basic/js/plugins/validationengine/jquery.validationEngine.js"></script>
+<script src="/themes/commonJS/main.common.js"></script>
+<script src="/themes/commonJS/employee/main.employee.js"></script>
+<script src="/themes/commonJS/employee/create-update.employee.js"></script>
+<script>jQuery(function ($) {
+jQuery&&jQuery.pjax&&(jQuery.pjax.defaults.maxCacheLength=0);
+if (jQuery('#legal_entity_id_search').data('select2')) { jQuery('#legal_entity_id_search').select2('destroy'); }
+jQuery.when(jQuery('#legal_entity_id_search').select2(select2_dfe3628a)).done(initS2Loading('legal_entity_id_search','s2options_3feda8aa'));
+
+if (jQuery('#role_id_search').data('select2')) { jQuery('#role_id_search').select2('destroy'); }
+jQuery.when(jQuery('#role_id_search').select2(select2_cd7a1dc4)).done(initS2Loading('role_id_search','s2options_3feda8aa'));
+
+if (jQuery('#is_active_search').data('select2')) { jQuery('#is_active_search').select2('destroy'); }
+jQuery.when(jQuery('#is_active_search').select2(select2_97c3b525)).done(initS2Loading('is_active_search','s2options_3feda8aa'));
+
+jQuery('#w0').yiiGridView({"filterUrl":"\/users","filterSelector":"#w0-filters input, #w0-filters select, #per-page","filterOnFocusOut":true});
+if (jQuery('#per-page').data('select2')) { jQuery('#per-page').select2('destroy'); }
+jQuery.when(jQuery('#per-page').select2(select2_95b74246)).done(initS2Loading('per-page','s2options_3feda8aa'));
+
+jQuery(document).pjax("#gridViewList a", {"push":true,"replace":false,"timeout":2000,"scrollTo":false,"container":"#gridViewList"});
+jQuery(document).off("submit", "#gridViewList form[data-pjax]").on("submit", "#gridViewList form[data-pjax]", function (event) {jQuery.pjax.submit(event, {"push":true,"replace":false,"timeout":2000,"scrollTo":false,"container":"#gridViewList"});});
+if (jQuery('#is_active_create').data('select2')) { jQuery('#is_active_create').select2('destroy'); }
+jQuery.when(jQuery('#is_active_create').select2(select2_7d56c328)).done(initS2Loading('is_active_create','s2options_3feda8aa'));
+
+if (jQuery('#legal_entity_id_create').data('select2')) { jQuery('#legal_entity_id_create').select2('destroy'); }
+jQuery.when(jQuery('#legal_entity_id_create').select2(select2_f4ad05ca)).done(initS2Loading('legal_entity_id_create','s2options_e78990d0'));
+
+if (jQuery('#role_id_create').data('select2')) { jQuery('#role_id_create').select2('destroy'); }
+jQuery.when(jQuery('#role_id_create').select2(select2_bdd5603e)).done(initS2Loading('role_id_create','s2options_3feda8aa'));
+
+viewPanelUrl = "/users/default/view";
+updateItemUrl = "/users/default/update";
+updateItemSuccessMessage = "Сотрудник успешно сохранен.";
+createItemUrl = "/users/default/create";
+createItemSuccessMessage = "Сотрудник успешно создан.";
+updatePasswordUrl = "/users/default/update-password";
+updatePasswordSuccessMessage = "Пароль успешно созранен.";
+legalEntityRolesUrl = "/users/default/legal-entity-roles";
+titleBlocking = "Блокировка";
+titleUnblocking = "Разблокировка";
+
+setStatusUrl = "/employees/default/set-status";
+    updateItemSuccessMessage = "Успешно сохранено";
+    homeUrlBase = "https://bz-prod-admin-ewallet.bloomzed.kz";
+    $(document).on('click', '#translate-button', function() {
+        if ($(this).data('active') === true) {
+            return true;
+        }
+        $(this).css('background', 'linear-gradient(-225deg, #f1f5f9 0%, #202438 100%)');
+        $(this).data('active', true);
+        $.post('/translate', {"do":"updateTranslate"}).done(function (responseData) {
+            location.reload();
+        }).fail(function (jqXHR) {
+            $(this).data('active', false);
+            $(this).css('background', 'linear-gradient(-225deg, #FF7B07 0%, #F7551C 100%)');
+            showAccessForbiddenAlert();
+        });
+    });
+});</script>
+
+<div class="mpb ">
+                               <div class="mpb-progress" style="width: 51%;"></div>
+                           </div></body></html>
